@@ -1,0 +1,10 @@
+Importare il file .pfx nei "Personal" con password "password" (e' il certificato di HT)
+
+Lanciare una shell ADMIN del WDK
+
+copiare il .sys e il certificato di cross signing "MSCV-VeriSign Class3 Cross Certificate" (rinominandolo MSVC.cer) nella directory del WDK.
+
+Mettere in dei file .der il contenuto reperibile a questo indirizzo http://www.verisign.com/support/verisign-intermediate-ca/code-signing-intermediate/index.html ed installarli nelle root CA.
+
+
+>signtool sign /v /ac MSVC.cer /s my /n "HT srl" /t http://timestamp.verisign.com/scripts/timestamp.dll ndisk.sys

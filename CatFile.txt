@@ -1,0 +1,16 @@
+[CatalogHeader]
+Name=tstamd64.cat
+PublicVersion=0x0000001
+EncodingType=0x00010001
+CATATTR1=0x10010001:OSAttr:2:6.0
+[CatalogFiles]
+<hash>File1=amd64\toaster.pdb
+<hash>File2=amd64\toaster.sys
+<hash>File3=amd64\toastva.exe
+<hash>File4=amd64\toastva.pdb
+<hash>File5=amd64\tostrcls.dll
+<hash>File6=amd64\tostrcls.pdb
+<hash>File7=amd64\tostrco2.dll
+<hash>File8=amd64\tostrco2.pdb
+
+Signtool sign /v /ac MSCV-VSClass3.cer /s my /n contoso.com /t http://timestamp.verisign.com/scripts/timestamp.dll tstamd64.cat
